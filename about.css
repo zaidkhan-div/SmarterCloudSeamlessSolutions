@@ -20,10 +20,10 @@
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('./assets/Hero.png');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     color: white;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -114,6 +114,11 @@ nav p a {
     transition: transform 0.3s ease;
 }
 
+.hero-content button a {
+    text-decoration: none;
+    color: white;
+}
+
 .icon {
     background-color: white;
     color: black;
@@ -137,9 +142,9 @@ nav p a {
     }
 }
 
-/* Services Section */
-/* overview */
-/* Overview Section */
+/* Who we are Section */
+
+
 .overview {
     background-color: var(--background-color);
     padding-left: 5%;
@@ -285,57 +290,28 @@ nav p a {
     }
 }
 
-/* Mission-Section */
-
+/* Mission Section */
 .mission {
     background-color: var(--background-color);
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .mission__container {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 40px;
     font-family: var(--font-family);
-    gap: 50px;
 }
 
-/* LEFT SECTION (Image - touches edge) */
+/* Content section (right on desktop) */
 .mission__left {
     order: 1;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    min-height: 400px;
-}
-
-.mission__img__container {
-    width: 90%;
-    max-width: 473px;
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    padding-bottom: 40px;
-}
-
-.mission__img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-}
-
-/* RIGHT SECTION (Content - padded) */
-.mission__right {
-    order: 2;
-    /* padding: 40px 5% 40px 10%; */
-    /* More right padding */
+    padding-right: 5%;
+    text-align: center;
 }
 
 .mission__heading {
@@ -354,73 +330,161 @@ nav p a {
     margin-bottom: 35px;
 }
 
-.mission__form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 500px;
-}
-
-.mission__form input,
-.mission__form textarea {
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #333333;
-    background-color: black;
-    font-size: 1rem;
-}
-
-/* Button */
-.mission-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--text-color);
+/* Image section (left on desktop) */
+.mission__right {
     background-color: var(--primary-color);
-    padding: 12px 25px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    font-size: clamp(1rem, 2vw, 1.125rem);
-    transition: transform 0.3s ease;
-    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 400px;
+    width: 100%;
 }
 
-.mission-btn i {
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border-radius: 50%;
+.mission__img__container {
+    width: 90%;
+    max-width: 473px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    padding-bottom: 40px;
+}
+
+.mission__img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Desktop Layout */
-@media (min-width: 770px) {
+@media (min-width: 768px) {
     .mission__container {
         flex-direction: row;
+        gap: 60px;
+        width: 100%;
     }
 
     .mission__left {
         flex: 1;
-        order: 1;
-        min-height: 580px;
-        margin-left: calc(-50vw + 50%);
-        padding-left: calc(50vw - 50%);
+        order: 2;
+        align-self: center;
+        text-align: left;
+        width: 50%;
+        min-width: 500px;
+        padding: 0 40px;
     }
 
     .mission__right {
-        flex: 1;
-        order: 2;
-        padding: 80px 5% 80px 5%;
-        /* Balanced padding */
+        flex: 0 0 auto;
+        order: 1;
+        width: 50%;
+        min-width: 650px;
+        min-height: 580px;
+        margin-right: calc(-50vw + 50%);
+        padding-right: calc(50vw - 50%);
     }
 
     .mission__img__container {
-        margin-top: 100px;
+        position: absolute;
+        max-width: 650px;
         height: 580px;
+        margin-top: 100px;
+        right: 0;
+    }
+
+    .mission__img {
+        max-width: 473px;
     }
 }
 
-/* Footer Container */
+/* Mission Section Styling */
+.mission__left {
+    width: 550px;
+}
+
+.mission-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 2.5rem;
+    line-height: 50px;
+}
+
+.mission-icon {
+    border: 1px solid white;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.mission-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.mission-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
+}
+
+/* Font Awesome Icons */
+.fa-rocket,
+.fa-eye {
+    font-size: 1.2rem;
+}
+
+/* Large Desktop Adjustments */
+@media (min-width: 1200px) {
+    .mission__right {
+        padding-right: 10%;
+    }
+}
+
+/* Founder-Section */
+.founder {
+    background-color: var(--background-color);
+    padding: 80px 0px;
+}
+
+.founder_content {
+    width: 100%;
+    padding: 0px 50px;
+    margin: auto;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.founder-title {
+    font-family: var(--font-family);
+    margin-bottom: 40px;
+}
+
+.founder-title h1 {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.founder_image {
+    width: 100%;
+}
+
+.founder_image img {
+    width: 100%;
+}
+
+/* Footer Container  */
+
 .footer {
     background-color: var(--background-color);
     color: var(--text-color);
