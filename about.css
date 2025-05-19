@@ -35,7 +35,6 @@
     height: 50vh;
     display: flex;
     flex-direction: column;
-    padding: 20px;
 }
 
 /* Header Styles */
@@ -136,20 +135,7 @@ nav p a {
     font-size: 12px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 10px;
-    }
 
-    .hero-content h1 {
-        margin-bottom: 15px;
-    }
-
-    .hero-content button {
-        padding: 10px 20px;
-    }
-}
 
 /* Who we are Section */
 
@@ -174,6 +160,7 @@ nav p a {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 50px;
+    justify-content: center;
     width: 50%;
 }
 
@@ -307,6 +294,7 @@ nav p a {
     padding: 0 5%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 50px;
 }
 

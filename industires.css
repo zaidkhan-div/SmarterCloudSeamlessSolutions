@@ -111,15 +111,17 @@ nav p a {
     background: var(--primary-color);
     color: var(--button-text-color);
     border: none;
-    padding: 12px 25px;
+    padding: 5px 5px;
     border-radius: 100px;
     font-size: clamp(16px, 2vw, 18px);
-    font-weight: 700;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    padding-right: 24px;
 }
 
 .hero-content button a {
@@ -130,14 +132,15 @@ nav p a {
 .icon {
     background-color: white;
     color: black;
-    padding: 8px;
+    font-size: 18px;
+    padding: 10px;
     border-radius: 50%;
-    font-size: 12px;
 }
 
+/* hero Section Ends Here */
 
-/* Who we are Section */
 
+/* Overview Section */
 .overview {
     background-color: var(--background-color);
     padding-top: 99px;
@@ -156,8 +159,8 @@ nav p a {
 .overview__left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: center;
     row-gap: 50px;
     width: 50%;
 }
@@ -236,237 +239,56 @@ nav p a {
     font-size: 12px;
 }
 
-/* Mission Section */
+/* Second_Mission Section */
+.second_mission_container {
+    flex-direction: row-reverse;
+}
 
-.mission {
+/* third_mission_container */
+
+.third_mission_container {}
+
+/* forth_mission_container */
+
+.forth_mission_container {
+    flex-direction: row-reverse;
+}
+
+/* fifth_mission_container */
+
+.fifth_mission_container {}
+
+/* Sixth_mission_container */
+
+.sixth_mission_container {
+    flex-direction: row-reverse;
+}
+
+
+/* schedule_call_container */
+.schedule {
     background-color: var(--background-color);
-    padding-top: 99px;
-    padding-bottom: 99px;
-    overflow: hidden;
 }
 
-.mission__container {
-    width: 100%;
+.schedule_call_container {
     display: flex;
-    gap: 66px;
-    font-family: var(--font-family);
-}
-
-/* LEFT SECTION (Image - touches edge) */
-.mission__left {
-    order: 1;
-    /* background-color: var(--primary-color); */
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    height: 580px;
-    gap: 12px;
-}
-
-.img_container {
-    width: 165px;
-}
-
-.mission__img {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    max-height: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* RIGHT SECTION (Content - padded) */
-/* Mission Right Side - Icon Right Alignment */
-.mission__right {
-    order: 2;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
     flex-direction: column;
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
     row-gap: 50px;
 }
 
-/* Rest of your existing styles... */
-.mission__heading {
+.schedule_call_container h1 {
     font-size: 60px;
     font-weight: 500;
-    color: var(--text-color);
 }
 
-.mission-content {
-    flex: 1;
-    text-align: left;
-    /* Ensure text stays left-aligned */
+.schedule_img_container {
+    max-width: 945px;
+    margin: auto;
 }
 
-.mission-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: 10px;
-}
-
-.mission-description {
-    font-size: 18px;
-    line-height: 1.6;
-    color: var(--text-color);
-    margin: 0;
-}
-
-/* Counter_Section */
-/* stats */
-
-.statistics {
-    width: 100%;
-    background-color: var(--background-color);
-    height: 183px;
-    background-color: #121212;
-}
-
-.statistics__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 183px;
-}
-
-.statistics__numbers h3 {
-    color: var(--text-color);
-    margin: 0;
-    margin-bottom: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 44px;
-    font-weight: 700;
-    font-family: var(--font-family);
-    letter-spacing: -3px;
-
-}
-
-.statistics__numbers {
-    padding: 0 30px;
-}
-
-.statistics__numbers span {
-    color: var(--text-color);
-    font-size: 16px;
-    font-weight: 500;
-    font-family: var(--font-family);
-    letter-spacing: 0.5px;
-    text-align: center;
-}
-
-.line {
-    width: 1px;
-    height: 25px;
-    background-color: var(--text-color);
-    margin: 0 20px
-}
-
-/* Other Services */
-
-.other__services {
-    background-color: var(--background-color);
-    padding: 20px;
-}
-
-.other__services__right {
-    max-width: 600px;
-    flex: 3;
-    max-width: 600px;
-    flex: 3;
-    gap: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.other__services__right h2 {
-
-    margin-bottom: 10px;
-}
-
-/* .description {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    line-height: 1.5;
-    border-radius: 8px;
-    padding: 10px;
-} */
-
-.accordion-item {
-    background: #fff;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-}
-
-.first__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 15px 0;
-    color: white;
-    font-family: var(--font-family);
-
-}
-
-
-
-.accordion-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 700;
-    color: black;
-    font-family: var(--font-family);
-
-}
-
-.toggle-icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.accordion-content p {
-    margin: 15px 0;
-    color: black;
-    line-height: 22px;
-    font-weight: 400;
-    font-size: 16px;
-
-}
-
-.accordion-item.active .toggle-icon {
-    transform: rotate(45deg);
-}
-
-.accordion-item.active .accordion-content {
-    max-height: 200px;
-    padding: 15px 20px;
-}
 
 /* Footer Container  */
 
