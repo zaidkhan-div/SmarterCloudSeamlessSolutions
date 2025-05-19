@@ -29,10 +29,10 @@
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('./assets/Hero.png');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     color: white;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -123,6 +123,11 @@ nav p a {
     transition: transform 0.3s ease;
 }
 
+.hero-content button a {
+    text-decoration: none;
+    color: white;
+}
+
 .icon {
     background-color: white;
     color: black;
@@ -146,9 +151,9 @@ nav p a {
     }
 }
 
-/* Services Section */
-/* overview */
-/* Overview Section */
+/* Who we are Section */
+
+
 .overview {
     background-color: var(--background-color);
     padding-top: 99px;
@@ -246,7 +251,7 @@ nav p a {
     font-size: 12px;
 }
 
-/* Mission-Section */
+/* Mission Section */
 
 .mission {
     background-color: var(--background-color);
@@ -265,6 +270,7 @@ nav p a {
 /* LEFT SECTION (Image - touches edge) */
 .mission__left {
     order: 1;
+    /* background-color: var(--primary-color); */
     width: 50%;
     display: flex;
     justify-content: center;
@@ -294,77 +300,99 @@ nav p a {
 }
 
 /* RIGHT SECTION (Content - padded) */
+/* Mission Right Side - Icon Right Alignment */
 .mission__right {
     order: 2;
+    width: 50%;
+    padding: 0 5%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    row-gap: 50px;
-    width: 50%;
-
+    gap: 50px;
 }
 
+.mission-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.mission-icon {
+    border: 1px solid white;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    /* Space between text and icon */
+}
+
+/* Rest of your existing styles... */
 .mission__heading {
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: 60px;
     font-weight: 500;
     color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.25;
 }
 
-.mission__text {
+.mission-content {
+    flex: 1;
+    text-align: left;
+    /* Ensure text stays left-aligned */
+}
+
+.mission-title {
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--text-color);
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 400;
-    line-height: 1.75;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 }
 
-.mission__form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.mission-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+}
+
+
+/* Founder-Section */
+.founder {
+    background-color: var(--background-color);
+    padding: 80px 0px;
+}
+
+.founder_content {
+    width: 100%;
+    padding: 0px 50px;
+    margin: auto;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.founder-title {
+    font-family: var(--font-family);
+    margin-bottom: 40px;
+}
+
+.founder-title h1 {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.founder_image {
     width: 100%;
 }
 
-.mission__form input,
-.mission__form textarea {
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #333333;
-    background-color: black;
-    font-size: 1rem;
+.founder_image img {
+    width: 100%;
 }
 
-/* Button */
-.mission-btn {
-    display: inline-flex;
-    align-items: center;
-    color: var(--text-color);
-    background-color: var(--primary-color);
-    padding: 12px 25px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    font-size: clamp(1rem, 2vw, 1.125rem);
-    transition: transform 0.3s ease;
-    width: fit-content;
-}
+/* Footer Container  */
 
-.mission-btn a {
-    color: white;
-    text-decoration: none;
-}
-
-.mission-btn i {
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-
-/* Footer Container */
 .footer {
     background-color: var(--background-color);
     color: var(--text-color);
