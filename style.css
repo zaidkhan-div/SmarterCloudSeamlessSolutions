@@ -5,6 +5,17 @@
     font-family: 'Arial', sans-serif;
 }
 
+@font-face {
+    font-family: "Satoshi";
+    src: url('./Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.eot') format('embedded-opentype'),
+        url('./Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff2') format('woff2'),
+        url('./Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff') format('woff'),
+        url('./Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    /* Medium is typically 500 */
+    font-style: normal;
+}
+
 :root {
     --primary-color: rgb(0, 0, 245);
     --background-color: black;
@@ -13,6 +24,8 @@
     --button-text-color: white;
     --font-family: "Satoshi", "poppins", sans-serif;
 }
+
+
 
 .container {
     width: 100%;
@@ -97,6 +110,7 @@ nav p a {
     font-size: clamp(32px, 5vw, 68px);
     margin: 0 0 20px 0;
     font-weight: 500;
+    font-family: var(--font-family);
     line-height: 1.2;
 }
 
