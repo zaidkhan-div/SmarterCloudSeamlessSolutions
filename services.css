@@ -172,6 +172,7 @@ nav p a {
 .overview__left {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     row-gap: 50px;
     width: 50%;
@@ -274,24 +275,18 @@ nav p a {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
     position: relative;
     height: 580px;
+    gap: 12px;
 }
 
-.mission__img__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    background-color: var(--primary-color);
-    z-index: 0;
+.img_container {
+    width: 165px;
 }
 
 .mission__img {
     position: relative;
-    width: 470px;
+    width: 100%;
     height: 500px;
     max-height: 500px;
     border-radius: 15px;
@@ -304,31 +299,11 @@ nav p a {
 .mission__right {
     order: 2;
     width: 50%;
-    padding: 0 5%;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.mission-item {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.mission-icon {
-    border: 1px solid white;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    font-size: 1.2rem;
-    margin-left: 20px;
-    /* Space between text and icon */
+    align-items: start;
+    flex-direction: column;
+    row-gap: 50px;
 }
 
 /* Rest of your existing styles... */
@@ -358,37 +333,54 @@ nav p a {
     margin: 0;
 }
 
+/* Counter_Section */
+/* stats */
 
-/* Founder-Section */
-.founder {
+.statistics {
+    width: 100%;
     background-color: var(--background-color);
-    padding: 80px 0px;
+    height: 183px;
 }
 
-.founder_content {
-    width: 100%;
-    padding: 0px 50px;
-    margin: auto;
-    color: white;
-    margin-bottom: 30px;
+.statistics__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 183px;
 }
 
-.founder-title {
+.statistics__numbers h3 {
+    color: var(--text-color);
+    margin: 0;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 44px;
+    font-weight: 700;
     font-family: var(--font-family);
-    margin-bottom: 40px;
+    letter-spacing: -3px;
+
 }
 
-.founder-title h1 {
-    font-size: 60px;
+.statistics__numbers {
+    padding: 0 30px;
+}
+
+.statistics__numbers span {
+    color: var(--text-color);
+    font-size: 16px;
     font-weight: 500;
+    font-family: var(--font-family);
+    letter-spacing: 0.5px;
+    text-align: center;
 }
 
-.founder_image {
-    width: 100%;
-}
-
-.founder_image img {
-    width: 100%;
+.line {
+    width: 1px;
+    height: 25px;
+    background-color: var(--text-color);
+    margin: 0 20px
 }
 
 /* Footer Container  */

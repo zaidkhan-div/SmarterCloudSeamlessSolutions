@@ -136,122 +136,9 @@ nav p a {
     font-size: 12px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 10px;
-    }
+/* Hero Section Ends Here*/
 
-    .hero-content h1 {
-        margin-bottom: 15px;
-    }
-
-    .hero-content button {
-        padding: 10px 20px;
-    }
-}
-
-/* Who we are Section */
-
-
-.overview {
-    background-color: var(--background-color);
-    padding-top: 99px;
-    padding-bottom: 99px;
-    overflow: hidden;
-}
-
-.overview__container {
-    width: 100%;
-    display: flex;
-    gap: 66px;
-    font-family: var(--font-family);
-}
-
-/* Left Content */
-.overview__left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 50px;
-    width: 50%;
-}
-
-.overview__heading {
-    font-size: 60px;
-    font-weight: 500;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.25;
-}
-
-.overview__text {
-    color: var(--text-color);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 35px;
-}
-
-/* Right Image Section */
-
-.overview__right {
-    height: 580px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-}
-
-.overview__img__container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 500px;
-    background-color: var(--primary-color);
-    z-index: 0;
-}
-
-.overview__img {
-    position: relative;
-    width: 470px;
-    height: 500px;
-    max-height: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* Button Styles */
-.service-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--text-color);
-    background-color: var(--primary-color);
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.service-btn a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: clamp(1rem, 2vw, 1.125rem);
-}
-
-.service-btn i {
-    background-color: white;
-    color: black;
-    padding: 8px;
-    border-radius: 100%;
-    font-size: 12px;
-}
-
-/* Mission Section */
+/* Mission_Section */
 
 .mission {
     background-color: var(--background-color);
@@ -267,47 +154,21 @@ nav p a {
     font-family: var(--font-family);
 }
 
-/* LEFT SECTION (Image - touches edge) */
+/* Mission Left */
+
 .mission__left {
-    order: 1;
-    /* background-color: var(--primary-color); */
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    height: 580px;
-}
-
-.mission__img__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    background-color: var(--primary-color);
-    z-index: 0;
-}
-
-.mission__img {
-    position: relative;
-    width: 470px;
-    height: 500px;
-    max-height: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* RIGHT SECTION (Content - padded) */
-/* Mission Right Side - Icon Right Alignment */
-.mission__right {
     order: 2;
     width: 50%;
     padding: 0 5%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
+    color: var(--text-color);
+}
+
+.mission__left h2 {
+    font-size: 36px;
 }
 
 .mission-item {
@@ -328,10 +189,8 @@ nav p a {
     flex-shrink: 0;
     font-size: 1.2rem;
     margin-left: 20px;
-    /* Space between text and icon */
 }
 
-/* Rest of your existing styles... */
 .mission__heading {
     font-size: 60px;
     font-weight: 500;
@@ -341,7 +200,6 @@ nav p a {
 .mission-content {
     flex: 1;
     text-align: left;
-    /* Ensure text stays left-aligned */
 }
 
 .mission-title {
@@ -358,37 +216,78 @@ nav p a {
     margin: 0;
 }
 
+/* Mission_right */
 
-/* Founder-Section */
-.founder {
-    background-color: var(--background-color);
-    padding: 80px 0px;
+.mission__right {
+    order: 2;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    width: 55%;
+    height: 717px;
+    justify-content: center;
+    padding: 0px 3%
 }
 
-.founder_content {
-    width: 100%;
-    padding: 0px 50px;
-    margin: auto;
-    color: white;
-    margin-bottom: 30px;
-}
-
-.founder-title {
-    font-family: var(--font-family);
-    margin-bottom: 40px;
-}
-
-.founder-title h1 {
-    font-size: 60px;
+.mission__heading {
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.25;
 }
 
-.founder_image {
+.mission__text {
+    color: var(--text-color);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.75;
+    margin-bottom: 35px;
+}
+
+.mission__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
 }
 
-.founder_image img {
-    width: 100%;
+.mission__form input,
+.mission__form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    background-color: black;
+    font-size: 1rem;
+}
+
+/* Button */
+.mission-btn {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    transition: transform 0.3s ease;
+    width: fit-content;
+}
+
+.mission-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.mission-btn i {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
 }
 
 /* Footer Container  */
