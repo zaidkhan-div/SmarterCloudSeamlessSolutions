@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Satoshi', sans-serif;
 }
 
 @font-face {
@@ -23,9 +23,8 @@
     --text-color: white;
     --button-text-color: white;
     --font-family: "Satoshi", "poppins", sans-serif;
+    --font-size: 60px
 }
-
-
 
 .container {
     width: 100%;
@@ -71,7 +70,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0px 70px; */
+    padding: 0px 70px;
 }
 
 nav {
@@ -107,7 +106,7 @@ nav p a {
 }
 
 .hero-content h1 {
-    font-size: clamp(32px, 5vw, 68px);
+    font-size: 68px;
     margin: 0 0 20px 0;
     font-weight: 500;
     font-family: var(--font-family);
@@ -143,220 +142,47 @@ nav p a {
     font-size: 12px;
 }
 
-/* Overview Section */
-.overview {
-    background-color: var(--background-color);
-    padding-top: 99px;
-    padding-bottom: 99px;
-    overflow: hidden;
-}
+/* Button Resusable */
 
-.overview__container {
-    width: 100%;
-    display: flex;
-    gap: 66px;
-    font-family: var(--font-family);
-}
-
-/* Left Content */
-.overview__left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 50px;
-    justify-content: center;
-    width: 50%;
-}
-
-.overview__heading {
-    font-size: 60px;
+.button-wrapper button {
+    background: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 100px;
+    font-size: clamp(16px, 2vw, 18px);
     font-weight: 500;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.25;
-}
-
-.overview__text {
-    color: var(--text-color);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 35px;
-}
-
-/* Right Image Section */
-
-.overview__right {
-    height: 580px;
-    width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-}
-
-.overview__img__container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 500px;
-    background-color: var(--primary-color);
-    z-index: 0;
-}
-
-.overview__img {
-    position: relative;
-    width: 470px;
-    height: 500px;
-    max-height: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* Button Styles */
-.service-btn {
-    display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--text-color);
-    background-color: var(--primary-color);
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 25px 5px 5px;
     transition: transform 0.3s ease;
 }
 
-.service-btn a {
+.button-wrapper button a {
     text-decoration: none;
-    color: var(--text-color);
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: white;
 }
 
-.service-btn i {
+.icon_wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
     background-color: white;
     color: black;
-    padding: 8px;
-    border-radius: 100%;
-    font-size: 12px;
-}
-
-/* Mission-Section */
-
-.mission {
-    background-color: var(--background-color);
-    padding-top: 99px;
-    padding-bottom: 99px;
-    overflow: hidden;
-}
-
-.mission__container {
-    width: 100%;
-    display: flex;
-    gap: 66px;
-    font-family: var(--font-family);
-}
-
-/* LEFT SECTION (Image - touches edge) */
-.mission__left {
-    order: 1;
-    width: 50%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    height: 580px;
-}
-
-.mission__img__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    background-color: var(--primary-color);
-    z-index: 0;
-}
-
-.mission__img {
-    position: relative;
-    width: 470px;
-    height: 500px;
-    max-height: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* RIGHT SECTION (Content - padded) */
-.mission__right {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 50px;
-    width: 50%;
-
-}
-
-.mission__heading {
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 500;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.25;
-}
-
-.mission__text {
-    color: var(--text-color);
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 400;
-    line-height: 1.75;
-    margin-bottom: 35px;
-}
-
-.mission__form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-
-.mission__form input,
-.mission__form textarea {
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #333333;
-    background-color: black;
-    font-size: 1rem;
-}
-
-/* Button */
-.mission-btn {
-    display: inline-flex;
     align-items: center;
-    color: var(--text-color);
-    background-color: var(--primary-color);
-    padding: 12px 25px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    font-size: clamp(1rem, 2vw, 1.125rem);
-    transition: transform 0.3s ease;
-    width: fit-content;
+    overflow: hidden;
+    /* Add this line */
+    transition: width 0.3s ease;
+    /* Add this line */
 }
 
-.mission-btn a {
-    color: white;
-    text-decoration: none;
-}
 
-.mission-btn i {
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border-radius: 50%;
+.icon {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
