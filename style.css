@@ -18,13 +18,24 @@
 
 :root {
     --primary-color: rgb(0, 0, 245);
-    --background-color: black;
+    --background-color: white;
+    --text-color: black;
     --secondary-color: #2ecc71;
-    --text-color: white;
-    --button-text-color: white;
+    --button-text-color: black;
     --font-family: "Satoshi", "poppins", sans-serif;
     --font-size: 60px
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: black;
+        --text-color: white;
+        --button-text-color: white;
+
+    }
+}
+
+/* A common usage is to use a light color scheme by default, and then use prefers-color-scheme: dark to override the colors to a darker variant. It is also possible to do it the other way around. */
 
 .container {
     width: 100%;
@@ -185,6 +196,80 @@ nav p a {
     font-weight: 500;
 }
 
+/* Who we are Section */
+
+.overview {
+    background-color: var(--background-color);
+    padding-top: 99px;
+    padding-bottom: 99px;
+    overflow: hidden;
+}
+
+.overview__container {
+    width: 100%;
+    display: flex;
+    gap: 66px;
+    font-family: var(--font-family);
+}
+
+/* Left Content */
+.overview__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 50px;
+    justify-content: center;
+    width: 50%;
+}
+
+.overview__heading {
+    font-size: 60px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.overview__text {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+/* Right Image Section */
+
+.overview__right {
+    height: 580px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.overview__img__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 500px;
+    background-color: var(--primary-color);
+    z-index: 0;
+}
+
+.overview__img {
+    position: relative;
+    width: 470px;
+    height: 500px;
+    max-height: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* OverView Section ends Here */
 
 /* Footer Container */
 .footer {

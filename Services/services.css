@@ -10,82 +10,6 @@
     flex-direction: column;
 }
 
-/* Who we are Section */
-
-.overview {
-    background-color: var(--background-color);
-    padding-top: 99px;
-    padding-bottom: 99px;
-    overflow: hidden;
-}
-
-.overview__container {
-    width: 100%;
-    display: flex;
-    height: auto;
-    gap: 66px;
-    font-family: var(--font-family);
-}
-
-/* Left Content */
-.overview__left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    row-gap: 50px;
-    width: 50%;
-    max-height: 750px;
-}
-
-.overview__heading {
-    font-size: 60px;
-    font-weight: 500;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.25;
-}
-
-.overview__text {
-    color: var(--text-color);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 35px;
-}
-
-/* Right Image Section */
-
-.overview__right {
-    height: 580px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-}
-
-.overview__img__container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 500px;
-    background-color: var(--primary-color);
-    z-index: 0;
-}
-
-.overview__img {
-    position: relative;
-    width: 470px;
-    height: 500px;
-    max-height: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-}
-
-
 /* Mission Section */
 
 .mission {
@@ -185,7 +109,7 @@
 }
 
 .statistics__numbers h3 {
-    color: var(--text-color);
+    color: white;
     margin: 0;
     margin-bottom: 8px;
     display: flex;
@@ -203,7 +127,7 @@
 }
 
 .statistics__numbers span {
-    color: var(--text-color);
+    color: white;
     font-size: 16px;
     font-weight: 500;
     font-family: var(--font-family);
@@ -214,7 +138,7 @@
 .line {
     width: 1px;
     height: 25px;
-    background-color: var(--text-color);
+    background-color: var(--background-color);
     margin: 0 20px
 }
 
